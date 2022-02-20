@@ -17,7 +17,7 @@ recognition.start();
 recognition.onresult = function(event)
 {
  console.log(event); 
-}
+
 var content = event.results[0][0].transcript;
 document.getElementById("status").innerHTML = "The Speech has been recognized as: " + content; 
 if(content =="Circle" || content=="circle")
@@ -33,7 +33,7 @@ if(content =="rectangle" || content=="Rectangle")
         y = Math.floor(Math.random() * 600);
         document.getElementById("status").innerHTML = "Started drawing rectangle "; 
         draw_rect = "set";
-      }
+      }}
 
       function draw() {
         if(draw_circle == "set")
